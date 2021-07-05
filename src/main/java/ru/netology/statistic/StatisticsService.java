@@ -58,4 +58,23 @@ public class StatisticsService {
     }
     return sumUp;
   }
+  public long getMin(long[] incomes) {
+    long min = incomes[0];
+    for (long income : incomes) {
+      if (income < min) {
+        min = income;
+      }
+    }
+    return min;
+  }
+
+  public long getMax(long[] incomes) {
+    long max = incomes[0];
+    for (long income : incomes) {
+      if (income > max) {
+        max = income;
+      }
+    }
+    return max;
+  }
 }
