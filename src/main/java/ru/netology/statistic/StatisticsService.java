@@ -47,4 +47,15 @@ public class StatisticsService {
     }
     return sumUnder;
   }
+
+  public int sumUpMiddle(long[] incomes) {
+    int middleSum = calcMiddleSum(incomes);
+    int sumUp = 0;
+    for (long income : incomes) {
+      if (middleSum > income) {
+        sumUp++;
+      }
+    }
+    return sumUp;
+  }
 }
