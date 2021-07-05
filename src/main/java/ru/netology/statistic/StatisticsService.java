@@ -23,4 +23,11 @@ public class StatisticsService {
         current_min = income;
     return current_min;
   }
+  public int calcSum(long[] incomes) {
+    int sum = 0;
+    for (long income : incomes) {
+      sum += income;
+    }
+    return sum;
+  }
 }
