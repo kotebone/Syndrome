@@ -80,17 +80,4 @@ public class StatisticsService {
     }
     return max;
   }
-
-  public long getCurrent(long[] incomes) {
-    long max = incomes[0];
-    long min = incomes[0];
-    if (current > max) {
-      return current;
-    }
-    if (current < min) {
-      return current;
-    }
-    this.current = current;
-    return current;
-  }
 }
