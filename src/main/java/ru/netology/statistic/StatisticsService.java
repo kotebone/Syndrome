@@ -30,4 +30,8 @@ public class StatisticsService {
     }
     return sum;
   }
+
+  public int calcMiddleSum(long[] incomes) {
+    return calcSum (incomes) / incomes.length;
+  }
 }
