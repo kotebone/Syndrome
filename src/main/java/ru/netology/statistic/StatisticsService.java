@@ -1,6 +1,8 @@
 package ru.netology.statistic;
 
 public class StatisticsService {
+  private long current;
+
   /**
    * Calculate index of max income
    *
@@ -58,6 +60,7 @@ public class StatisticsService {
     }
     return sumUp;
   }
+
   public long getMin(long[] incomes) {
     long min = incomes[0];
     for (long income : incomes) {
@@ -76,5 +79,18 @@ public class StatisticsService {
       }
     }
     return max;
+  }
+
+  public long getCurrent(long[] incomes) {
+    long max = incomes[0];
+    long min = incomes[0];
+    if (current > max) {
+      return current;
+    }
+    if (current < min) {
+      return current;
+    }
+    this.current = current;
+    return current;
   }
 }
