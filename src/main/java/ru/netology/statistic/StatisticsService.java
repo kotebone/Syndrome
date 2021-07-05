@@ -27,21 +27,21 @@ public class StatisticsService {
     return current_min;
   }
 
-  public int calcSum(long[] incomes) {
-    int sum = 0;
+  public long calcSum(long[] incomes) {
+    long sum = 0;
     for (long income : incomes) {
       sum += income;
     }
     return sum;
   }
 
-  public int calcMiddleSum(long[] incomes) {
+  public long calcMiddleSum(long[] incomes) {
     return calcSum(incomes) / incomes.length;
   }
 
-  public int sumUnderMiddle(long[] incomes) {
-    int middleSum = calcMiddleSum(incomes);
-    int sumUnder = 0;
+  public long sumUnderMiddle(long[] incomes) {
+    long middleSum = calcMiddleSum(incomes);
+    long sumUnder = 0;
     for (long income : incomes) {
       if (middleSum < income) {
         sumUnder++;
@@ -51,7 +51,7 @@ public class StatisticsService {
   }
 
   public int sumUpMiddle(long[] incomes) {
-    int middleSum = calcMiddleSum(incomes);
+    long middleSum = calcMiddleSum(incomes);
     int sumUp = 0;
     for (long income : incomes) {
       if (middleSum > income) {
@@ -74,9 +74,7 @@ public class StatisticsService {
   public long getMax(long[] incomes) {
     long max = incomes[0];
     for (long income : incomes) {
-      if (income > max) {
-        max = income;
-      }
+      if (income > max) ;
     }
     return max;
   }
