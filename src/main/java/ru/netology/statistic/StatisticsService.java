@@ -13,7 +13,7 @@ public class StatisticsService {
     long current_max_index = 0;
     long current_max = incomes[0];
     for (long income : incomes)
-      if (current_max < income) ;
+      if (current_max > income) ;
    return current_max;
 }
 
@@ -74,7 +74,7 @@ public class StatisticsService {
   public long getMax(long[] incomes) {
     long max = incomes[0];
     for (long income : incomes) {
-      if (income > max) ;
+      if (income < max) ;
     }
     return max;
   }
